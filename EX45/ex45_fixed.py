@@ -57,7 +57,13 @@ class Start(Scene):
                \(_)/  `--'  `--'`------'`-----'`-----'   \(_)/"""
 
 
-        start_words= """\nYou were having a pleasant Friday evening with friends, when suddenly they drag you to a Thai Karaoke Bar! Oh no!!! Your mission tonight is to not insult your  friends, get back home safely, not get beaten up or lose your money.\nFirst, you need to get through the bouncer Odin.\n\n\tOdin: How much have you had to drink?\n"""
+        start_words= """
+You were having a pleasant Friday evening with friends, when suddenly they drag
+you to a Thai Karaoke Bar! Oh no!!! Your mission tonight is to get back home
+safely, not get beaten up or worse.
+First, you need to get through the bouncer Odin.
+
+        Odin: How much have you had to drink?\n"""
 
         for char in start_words:
             sleep(0.06)
@@ -110,17 +116,32 @@ class Counter(Scene):
             return 'hell'
 
         elif option == "no":
-            print "I have a feeling you'll regret not drinking more.."
+            print "\nI have a feeling you'll regret not drinking more.."
             return 'hell'
 
         else:
-            print "O-o! A biker sees you loitering by the counter and wants to pick up a fight. You have to escape home and ditch your friends."
+            print "\nO-o! A biker sees you loitering by the counter and wants to"
+            print "pick up a fight. You have to escape home and ditch your friends."
             return 'death'
 
 
 class Hell(Scene):
     def enter(self):
-        start_words= """\nAs you hang out in the bar counter, an elderly couple notices you. You intrigue them with your vitality. Sooner than you realize, you have been kidnapped to a\nprivate V.I.P. karaoke lounge out back, and you're holding a Pina Colada.\n\nSuddenly, your favorite song Take on Me by A-ha starts to play, and you faint\nfrom excitement. Ethel has bad eyesight, thinks you are 90 and having a heart\nattack, and feeds you two of her nitros. Gulp!\n\nYou had Ethel's nitros and DIED! Now you are in the actual hell!\n\n\tThe Devil: Bwahaha, that karaoke bar is providing me with more souls\n\tthan any other establishment I own!!\n\tI will grant you one opportunity to return back to earth. To regain your \tsoul, you must sing this karaoke song!"""
+        start_words= """
+As you hang out in the bar counter, an elderly couple notices you. You intrigue
+them with your vitality. Sooner than you realize, you have been kidnapped to a
+V.I.P. old people's karaoke lounge out back, and you're holding a Pina Colada.
+
+Suddenly, your favorite song Take on Me by A-ha starts to play, and you faint
+from excitement. Ethel has bad eyesight, thinks you are 90 and having a heart
+attack, and feeds you two of her nitros. Gulp!
+
+You had Ethel's nitros and DIED! Now you are in the actual hell!
+
+        The Devil: Bwahaha, that karaoke bar is providing me with more souls
+        than any other establishment I own!!
+        I will grant you one opportunity to return back to earth. To regain your
+        soul, you must sing this karaoke song!"""
         for char in start_words:
             sleep(0.06)
             sys.stdout.write(char)
@@ -139,7 +160,7 @@ class Swansong(Scene):
             return 'finished'
 
         else:
-            print "Oh no. You're dead forever."
+            print "\nOh no. You're dead forever."
             return 'death'
 
 
