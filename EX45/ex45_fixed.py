@@ -132,9 +132,9 @@ class Swansong(Scene):
             print "\n\tThe Devil: Arrgghh! You have broken my spell! I shall send you home!"
             return 'finished'
 
-            else:
-                print "Oh no. You're dead forever."
-                return 'death'
+        else:
+            print "Oh no. You're dead forever."
+            return 'death'
 
 
 class Finished(Scene):
