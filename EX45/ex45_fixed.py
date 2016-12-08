@@ -57,8 +57,7 @@ class Start(Scene):
                \(_)/  `--'  `--'`------'`-----'`-----'   \(_)/"""
 
 
-        start_words= """\nYou were having a pleasant Friday evening with friends, when suddenly they drag you to a Thai Karaoke Bar! Oh no!!! Your mission tonight is to not insult your  friends, get back home safely, not get beaten up or lose your money.\nFirst, you need to get through the bouncer Odin.
-        \n\n\tOdin: How much have you had to drink?\n"""
+        start_words= """\nYou were having a pleasant Friday evening with friends, when suddenly they drag you to a Thai Karaoke Bar! Oh no!!! Your mission tonight is to not insult your  friends, get back home safely, not get beaten up or lose your money.\nFirst, you need to get through the bouncer Odin.\n\n\tOdin: How much have you had to drink?\n"""
 
         for char in start_words:
             sleep(0.06)
@@ -67,7 +66,7 @@ class Start(Scene):
 
         choice = raw_input("\tYou: ")
 
-        if choice == "nothing":
+        if choice == "not much":
             print "\tOdin: Huh, better get your drink on! Welcome!"
             return 'bar'
 
@@ -78,7 +77,8 @@ class Start(Scene):
 
 class Bar(Scene):
     def enter(self):
-        print "\nYou've now entered the bar. A drunk lady is singing Abba. Your friends urge you to sing along. Fill in the missing lyrics!\n"
+        print "\nYou've now entered the bar. A drunk lady is singing Abba."
+        print "Your friends urge you to sing along. Fill in the missing lyrics!\n"
         print "\t\033[1mYou are the dancing queen,\n\tyoung and ____, only seventeen\033[0m"
 
         choice = raw_input("\nFill the blank: ")
