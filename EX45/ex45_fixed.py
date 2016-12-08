@@ -2,10 +2,12 @@ import sys
 from sys import exit
 from time import sleep
 
+
 class Scene (object):
 
     def enter(self):
         exit(1)
+
 
 class Engine(object):
 
@@ -22,10 +24,12 @@ class Engine(object):
 
             current_scene.enter()
 
+
 class Death(Scene):
     def enter(self):
         print "Well that was horrible."
         exit()
+
 
 class Start(Scene):
     def enter(self):
@@ -96,6 +100,7 @@ class Bar(Scene):
                 print "Oh no. You were thrown away from bar cause you suck at karaoke."
                 return 'death'
 
+
 class Counter(Scene):
     def enter(self):
         print "\nYou're now at the counter. Do you want to buy a drink?"
@@ -122,6 +127,7 @@ class Hell(Scene):
             sys.stdout.flush()
         return 'swansong'
 
+
 class Swansong(Scene):
     def enter(self):
         print "\n\n\t\033[1mForever young,\n\tI want to be forever young.\n\tDo you really want to ____ _______? Forever, and ever\033[0m"
@@ -142,6 +148,7 @@ class Finished(Scene):
     def enter(self):
         print "Wow! What a night! Well done!"
         return 'end'
+
 
 class Map(object):
 
