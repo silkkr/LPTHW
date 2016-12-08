@@ -129,7 +129,7 @@ class Swansong(Scene):
         choice = raw_input("\n\tFill the blanks: ")
 
         if choice == "live forever":
-            print "\n\tThe Devil: Arrgghh! You have broken my spell! I shall send you home!"
+            print "\n\tThe Devil: Arrgghh! You have broken my spell! I shall send you home!\n"
             return 'finished'
 
         else:
