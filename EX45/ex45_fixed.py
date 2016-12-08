@@ -1,3 +1,5 @@
+# ASCII text generated in http://patorjk.com/software/taag/
+
 import sys
 from sys import exit
 from time import sleep
@@ -158,7 +160,7 @@ class Swansong(Scene):
 
         if choice == "live forever":
             print "\n\tThe Devil: Arrgghh! You have broken my spell! I shall"
-            print "send you home!\n"
+            print "\tsend you home!\n"
             return 'finished'
 
         else:
