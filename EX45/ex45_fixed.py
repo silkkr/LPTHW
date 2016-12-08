@@ -53,8 +53,8 @@ class Start(Scene):
                \(_)/  `--'  `--'`------'`-----'`-----'   \(_)/"""
 
 
-        start_words= """\nYou were having a pleasant Friday evening with friends, when suddenly they drag you to a Thai Karaoke Bar! Oh no!!! Your mission tonight is to not insult your  friends, get back home safely, not get beaten up or lose your money.\nFirst, you need to get through the bouncer Odin.\n\n\tOdin:
-        How much have you had to drink?\n"""
+        start_words= """\nYou were having a pleasant Friday evening with friends, when suddenly they drag you to a Thai Karaoke Bar! Oh no!!! Your mission tonight is to not insult your  friends, get back home safely, not get beaten up or lose your money.\nFirst, you need to get through the bouncer Odin.
+        \n\n\tOdin: How much have you had to drink?\n"""
 
         for char in start_words:
             sleep(0.06)
