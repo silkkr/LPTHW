@@ -84,8 +84,8 @@ First, you need to get through the bouncer Odin.
 class Bar(Scene):
     def enter(self):
         print "\nYou've now entered the bar. A drunk lady is singing Abba."
-        print "Your friends urge you to sing along. Fill in the missing lyrics!\n"
-        print "\t\033[1mYou are the dancing queen,\n\tyoung and ____, only seventeen\033[0m"
+        print "Your friends urge you to sing along. Fill in the missing lyrics!"
+        print "\n\t\033[1mYou are the dancing queen,\n\tyoung and ____,\n\tonly seventeen\033[0m"
 
         choice = raw_input("\nFill the blank: ")
 
@@ -103,7 +103,7 @@ class Bar(Scene):
                 return 'counter'
 
             else:
-                print "Oh no. You were thrown away from bar cause you suck at karaoke."
+                print "Oh no. You were thrown out cause you suck at karaoke."
                 return 'death'
 
 
@@ -151,12 +151,14 @@ You had Ethel's nitros and DIED! Now you are in the actual hell!
 
 class Swansong(Scene):
     def enter(self):
-        print "\n\n\t\033[1mForever young,\n\tI want to be forever young.\n\tDo you really want to ____ _______? Forever, and ever\033[0m"
+        print "\n\n\t\033[1mForever young,\n\tI want to be forever young."
+        print "\tDo you really want to ____ _______? Forever, and ever\033[0m"
 
         choice = raw_input("\n\tFill the blanks: ")
 
         if choice == "live forever":
-            print "\n\tThe Devil: Arrgghh! You have broken my spell! I shall send you home!\n"
+            print "\n\tThe Devil: Arrgghh! You have broken my spell! I shall"
+            print "send you home!\n"
             return 'finished'
 
         else:
