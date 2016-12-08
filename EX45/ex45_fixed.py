@@ -53,7 +53,8 @@ class Start(Scene):
                \(_)/  `--'  `--'`------'`-----'`-----'   \(_)/"""
 
 
-        start_words= """\nYou were having a pleasant Friday evening with friends, when suddenly they drag you to a Thai Karaoke Bar! Oh no!!! Your mission tonight is to not insult your  friends, get back home safely, not get beaten up or lose your money.\nFirst, you need to get through the bouncer Odin.\n\n\tOdin: How much have you had to drink?\n"""
+        start_words= """\nYou were having a pleasant Friday evening with friends, when suddenly they drag you to a Thai Karaoke Bar! Oh no!!! Your mission tonight is to not insult your  friends, get back home safely, not get beaten up or lose your money.\nFirst, you need to get through the bouncer Odin.\n\n\tOdin:
+        How much have you had to drink?\n"""
 
         for char in start_words:
             sleep(0.06)
@@ -67,7 +68,7 @@ class Start(Scene):
             return 'bar'
 
         else:
-            print "\tOdin:Hmm, ok. I'll be watching you.."
+            print "\tOdin: Hmm, ok. I'll be watching you.."
             return 'bar'
 
 
@@ -83,12 +84,12 @@ class Bar(Scene):
             return 'counter'
 
         else:
-            print "Oh no, try again!"
+            print "\nOh no, try again!"
 
             choice = raw_input("You: ")
 
             if choice == "sweet":
-                print "Well finally! Let's go get a drink!"
+                print "\nWell finally! Let's go get a drink!"
                 return 'counter'
 
             else:
@@ -131,24 +132,15 @@ class Swansong(Scene):
             print "\n\tThe Devil: Arrgghh! You have broken my spell! I shall send you home!"
             return 'finished'
 
-        else:
-            print "Oh no, try again!"
-
-            choice = raw_input("You: ")
-
-            if choice == "sweet":
-                print "Well finally! Let's go get a drink!"
-                return 'counter'
-
             else:
-                print "\nOh no. You're dead forever.\n"
+                print "Oh no. You're dead forever."
                 return 'death'
 
 
 class Finished(Scene):
 
     def enter(self):
-        print "\nWow! What a night! Well done!\n"
+        print "Wow! What a night! Well done!"
         return 'end'
 
 class Map(object):
