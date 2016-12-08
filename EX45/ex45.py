@@ -1,5 +1,3 @@
-# Not final, uploaded for possible grading
-
 import sys
 from sys import exit
 from time import sleep
@@ -55,10 +53,10 @@ class Start(Scene):
                \(_)/  `--'  `--'`------'`-----'`-----'   \(_)/"""
 
 
-        start_words= """\nYou were having a pleasant Friday evening with friends, when suddenly they drag you to a Thai Karaoke Bar! Oh no!!! Your mission tonight is to not insult your  friends, get back home safely, not get beaten up or lose your money.\nFirst, you need to get through the bouncer Odin.\n\tOdin: How much have you had to drink?\n"""
+        start_words= """\nYou were having a pleasant Friday evening with friends, when suddenly they drag you to a Thai Karaoke Bar! Oh no!!! Your mission tonight is to not insult your  friends, get back home safely, not get beaten up or lose your money.\nFirst, you need to get through the bouncer Odin.\n\n\tOdin: How much have you had to drink?\n"""
 
         for char in start_words:
-            sleep(0.05)
+            sleep(0.06)
             sys.stdout.write(char)
             sys.stdout.flush()
 
@@ -116,9 +114,9 @@ class Counter(Scene):
 
 class Hell(Scene):
     def enter(self):
-        start_words= """\nAs you hang out in the bar counter, an elderly couple notices you. You intrigue them with your vitality. Sooner than you realize, you have been kidnapped to a\nprivate V.I.P. karaoke lounge out back, and you're holding a Pina Colada.\n\nSuddenly, your favorite song Take on Me by A-ha starts to play, and you faint\nfrom excitement. Ethel has bad eyesight, thinks you are 90 and having a heart attack, and feeds you two of her nitros. Gulp!\n\nYou had Ethel's nitros and DIED! Now you are in the actual hell!\n\n\tThe Devil: Bwahaha, that karaoke bar is providing me with more souls\n\tthan any other establishment I own!!\n\tI will grant you one opportunity to return back to earth. To regain your \tsoul, you must sing this karaoke song!"""
+        start_words= """\nAs you hang out in the bar counter, an elderly couple notices you. You intrigue them with your vitality. Sooner than you realize, you have been kidnapped to a\nprivate V.I.P. karaoke lounge out back, and you're holding a Pina Colada.\n\nSuddenly, your favorite song Take on Me by A-ha starts to play, and you faint\nfrom excitement. Ethel has bad eyesight, thinks you are 90 and having a heart\nattack, and feeds you two of her nitros. Gulp!\n\nYou had Ethel's nitros and DIED! Now you are in the actual hell!\n\n\tThe Devil: Bwahaha, that karaoke bar is providing me with more souls\n\tthan any other establishment I own!!\n\tI will grant you one opportunity to return back to earth. To regain your \tsoul, you must sing this karaoke song!"""
         for char in start_words:
-            sleep(0.05)
+            sleep(0.06)
             sys.stdout.write(char)
             sys.stdout.flush()
         return 'swansong'
@@ -127,10 +125,10 @@ class Swansong(Scene):
     def enter(self):
         print "\n\n\t\033[1mForever young,\n\tI want to be forever young.\n\tDo you really want to ____ _______? Forever, and ever\033[0m"
 
-        choice = raw_input("\n\tFill the blank: ")
+        choice = raw_input("\n\tFill the blanks: ")
 
         if choice == "live forever":
-            print "\n\tThe Devil: Arrgghh! You have broken my spell!"
+            print "\n\tThe Devil: Arrgghh! You have broken my spell! I shall send you home!"
             return 'finished'
 
         else:
@@ -143,14 +141,14 @@ class Swansong(Scene):
                 return 'counter'
 
             else:
-                print "Oh no. You're dead forever."
+                print "\nOh no. You're dead forever.\n"
                 return 'death'
 
 
 class Finished(Scene):
 
     def enter(self):
-        print "Wow! What a night! Well done!"
+        print "\nWow! What a night! Well done!\n"
         return 'end'
 
 class Map(object):
