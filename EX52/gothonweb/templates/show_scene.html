@@ -16,6 +16,9 @@
   {% elif scene.urlname == "the_end_winner" %}
     <p><a href="/">Play Again?</a></p>
 
+    {% elif scene.urlname == "the_end_loser" %}
+      <p><a href="/">Play Again?</a></p>
+
   {% else %}
     <p>
         <form action="/game" method="POST">
