@@ -15,155 +15,106 @@ class Scene(object):
         self.paths.update(paths)
 
 # Create the scenes of the game
-central_corridor = Scene("Central Corridor", "central_corridor",
+outside_bar = Scene("Welcome to Karaoke Hell", "outside_bar",
 """
-The Gothons of Planet Percal #25 have invaded your ship and destroyed
-your entire crew. You are the last surviving member (oh noes!) and your
-last mission is to get the neutron destruct bomb from the Weapons Armory,
-put it in the bridge, and blow up the ship after getting into an escape pod.
+You were having a pleasant Friday evening with friends, when suddenly they drag
+you to a Thai Karaoke Bar! Oh no!!! Your mission tonight is to get back home
+safely, not get beaten up or worse.
+First, you need to get through the bouncer Odin.
 
-You're now running down the central corridor to the Weapons Armory when a
-Gothon hops out in an evil clown costume filled with hate. He's blocking the door
-to the Armory and about to pull a weapon to blast you.
+Odin: Did you drink before you came here, yes or no?\n""")
+
+inside_bar = Scene("Inside Bar", "inside_bar",
+"""
+You've now entered the bar. A drunk lady is singing Abba.\n
+Your friends urge you to sing along. Fill in the missing lyrics!\n\n
+You are the dancing queen, young and ____, only seventeen
 """)
 
-laser_weapon_armory = Scene("Laser Weapon Armory", "laser_weapon_armory",
+the_counter = Scene("The Counter", "the_counter",
 """
-Lucky for you they made you learn Gothon insults in the academy.
-You tell the one Gothon joke you know:
-Lbhe zbgure vg fb sng, jura fur vfvg nebhaq gut ubhfr, fur fvgf nebhaq gut ubhfr.
-The Gothon bursts into laughter and rolls around on the ground. While its
-laughing you run up and use your copy of Nietzsche's notebooks (translated into Gothon)
-to lecture the Gothon on the shaky foundations of its ideologies. While it tries
-to cope with its existential crisis, you leap through the Weapon Armory door.
-You dive roll into the Weapon Armory, crouch and scan the room for more Gothons
-that might be hiding. It's dead quiet, too quiet.
-
-You stand up and run to the far side of the room and find the neutron bomb in its
-container. There's a keypad lock on the box and you need the code to get the bomb
-out. If you get the code wrong 10 times then the lock closes forever and you can't
-get the bomb. The code is 3 digits.
+You're now at the counter. Do you want to buy a drink?
 """)
 
-the_bridge = Scene("The Bridge", "the bridge",
+the_hell = Scene("The Hell", "the_hell",
 """
-The container clicks open and the seal breaks, letting gas out. You grab the
-neutron bomb and run like heck to the bridge where you place it in the right spot.
+As you hang out in the bar counter, an elderly couple notices you. You intrigue
+them with your vitality. Sooner than you realize, you have been kidnapped to a
+V.I.P. old people's karaoke lounge out back, and you're holding a Pina Colada.
 
-You burst into the Bridge with the bomb under your arm and surprise 5 Gothons
-who are trying to take control of the ship. Each of them has an uglier clown costume
-that the last. They don't pull their weapons out of fear that they will set off
-the bomb under your arm.
+Suddenly, your favorite song Take on Me by A-ha starts to play, and you faint
+from excitement. Ethel has bad eyesight, thinks you are 90 and having a heart
+attack, and feeds you two of her nitros. Gulp!
+
+You had Ethel's nitros and DIED! Now you are in the actual hell!
+
+        The Devil: Bwahaha, that karaoke bar is providing me with more souls
+        than any other establishment I own!! I will grant you one opportunity to
+        return back to earth. To regain your soul, you must sing this karaoke song!
+
+        Fill in the blanks:
+        Forever young, I want to be forever young.
+        Do you really want to ____ _______? Forever, and ever
 """)
 
-escape_pod = Scene("Escape Pod", "escape_pod",
+biker_death = Scene("O-oh!", "biker_death",
 """
-You gesture towards the bomb and threaten to set it off, the Gothons put up
-their arms and ask for a truce. You inch backwards to the door, open it, and
-carefully place the bomb on the floor, waving your finger over the detonate button.
-Then you jump back through the door, hit the close button and zap the lock so they
-can't get out. Now that the bomb is placed you run to the escape pod.
-
-You rush through the ship desperately trying to make it to the escape pod. It seems
-like there's no Gothons around, so you run as fast as possible. Eventually you reach
-the room with the escape pods, and you now need to pick one to take. Some of them could
-be damaged, but you don't have time to look. There's 5 pods, which one do you take?
+You just butchered ABBA! A giant biker meat mountain from MC ABBA overhears you,
+sheds a tear of anger, drags you to the back alley and gives you the beating of
+your life. You lost.
 """)
 
-shoot_death = Scene("Death...", "shoot_death",
+stag_death = Scene("That was a mistake...", "stag_death",
 """
-Quick on the draw you yank out your blaster and fire it at the Gothon.
-His clown costume is flowing and moving around his body, which throws
-off your aim. Your laser hits his costume but misses him entirely. This
-completely ruins his brand new costume his mother bought him, which
-makes him fly into an insane rage and blast you repeatedly in the face until
-you are dead. Then he eats you.
+You loiter by the counter without a drink and encounter an English stag party!
+
+"Oi mate, innit a bit fairy to be prissying around without a beer in ye hand?"
+
+That was the last thing you heard and then a fist hit your face. You lost.
 """)
 
-dodge_death = Scene("Death...", "dodge_death",
-""""
-Like a world class boxer you dodge, weave, slip and slide right
-as the Gothon's blaster cranks a laser past your head.
-In the middle of your artful dodge your foot slips and you
-bang your head on the metal wall and pass out.
-You wake up shortly after only to die as the Gothon stomps on
-your head and eats you.
-""")
-
-code_death = Scene("Death...", "code_death",
+the_end_winner = Scene("The Winner Takes It All", "the_end_winner",
 """
-The lock buzzes one last time and then you hear a sickening
-melting sound as the mechanism is fused together.
-You decide to sit there, and finally the Gothons blow up the
-ship from their ship and you die.
-""")
-
-throw_death = Scene("Death...", "code_death",
-"""
-In a panic you throw the bomb at the group of Gothons
-and make a leap for the door. Right as you drop it a
-Gothon shoots you right in the back killing you.
-As you die you see another Gothon frantically try to disarm
-the bomb. You die knowing they will probably blow up when
-it goes off."
-""")
-
-the_end_winner = Scene("You Made It!", "the_end_winner",
-"""
-You jump into pod 2 and hit the eject button. The pod flies out into space heading
-to the planet below. As you're heading down, you look back and see your ship implode
-and then explode like a supernova, taking down the Gothon ship at the same time.
-You made it!
+Wow! What a night! Well done!
 """)
 
 the_end_loser = Scene("...", "the_end_loser",
 """
-You jump into a random pod and hit the eject button. The pod escapes into space
-but there's a crack in the hull. Uh oh. The pod implodes and you with it.
+Oh no. Your soul has perished, permanently. You will spend eternity in an even
+worse karaoke bar. I'm sorry. You lost.
 """)
 
-generic_death = Scene("Death...", "death",
-[
-    "You died. You kinda suck at this.",
-    "You mom would be proud... if she were smarter.",
-    "Such a luser.",
-    "I have a small puppy that's better at this."
-]
-)
-
 # Define the action commands available in each Scene
-escape_pod.add_paths({
-    '2': the_end_winner,
+the_hell.add_paths({
+    'live forever': the_end_winner,
     '*': the_end_loser
 })
 
-the_bridge.add_paths({
-    'throw the bomb': generic_death,
-    'slowly place the bomb': escape_pod
+the_counter.add_paths({
+    'no': stag_death,
+    'yes': the_hell
 })
 
-laser_weapon_armory.add_paths({
-    '132': the_bridge,
-    '*': code_death
+inside_bar.add_paths({
+    'sweet': the_counter,
+    '*': biker_death
 })
 
-central_corridor.add_paths({
-    'shoot!': shoot_death,
-    'dodge!': dodge_death,
-    'tell a joke': laser_weapon_armory
+outside_bar.add_paths({
+    'yes': inside_bar,
+    'no': inside_bar
 })
+
 
 # Make some useful variables to be used in the web application
 SCENES = {
-    central_corridor.urlname: central_corridor,
-    laser_weapon_armory.urlname: laser_weapon_armory,
-    the_bridge.urlname : the_bridge,
-    escape_pod.urlname : escape_pod,
+    outside_bar.urlname: outside_bar,
+    inside_bar.urlname: inside_bar,
+    the_counter.urlname : the_counter,
+    the_hell.urlname : the_hell,
     the_end_winner.urlname : the_end_winner,
     the_end_loser.urlname : the_end_loser,
-    generic_death.urlname : generic_death,
-    shoot_death.urlname : shoot_death,
-    dodge_death.urlname : dodge_death,
-    throw_death.urlname : throw_death
+    biker_death.urlname : biker_death,
+    stag_death.urlname : stag_death,
 }
-START = central_corridor
+START = outside_bar

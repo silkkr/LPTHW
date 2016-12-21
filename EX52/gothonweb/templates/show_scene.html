@@ -6,10 +6,17 @@
   <pre>{{ scene.description }}</pre>
   {% if scene.urlname == "death" %}
     <p><a href="/">Play Again?</a></p>
+
+  {% elif scene.urlname == "stag_death" %}
+    <p><a href="/">Play Again?</a></p>
+
+  {% elif scene.urlname == "biker_death" %}
+    <p><a href="/">Play Again?</a></p>
+
   {% else %}
     <p>
         <form action="/game" method="POST">
-        What do you do? <input type="text" name="userinput"> <input type="SUBMIT">
+        Answer: <input type="text" name="userinput"> <input type="SUBMIT">
       </form>
     </p>
   {% endif %}

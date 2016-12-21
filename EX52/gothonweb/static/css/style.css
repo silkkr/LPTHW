@@ -1,0 +1,32 @@
+body {
+    background-image: url('/static/img/glitter.jpg');
+    background-size: cover;
+    background-color: white;
+  }
+
+h1 {
+    text-align: center;
+    color: #EE82EE;
+    font-size: 150px;
+    opacity: 0.8;
+}
+
+p {
+    text-align: center;
+    background-color: white;
+    color: #EE82EE;
+}
+
+pre {
+    text-align: center;
+    background-color: white;
+    opacity: 0.95;
+    color: #EE82EE;
+}
+
+form {
+  background-image: url("/static/img/flame.jpg");
+  text-align: center;
+  color: black;
+  padding: 70px;
+}
